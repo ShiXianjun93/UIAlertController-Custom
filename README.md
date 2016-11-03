@@ -10,7 +10,8 @@ UIAlertControllerCustom
 ![image](./source/alert.png)
 
 
-`   [self showAlertViewWithTitle:@"发现新版本" message:@"1、优化了一堆东西\n2、修复若干bug" cancelButtonTitle:@"取消" otherButtonTitles:@[@"前往更新"] handler:^(UIAlertController *alertController, UIAlertAction *action, NSInteger index) {
+```  
+    [self showAlertViewWithTitle:@"发现新版本" message:@"1、优化了一堆东西\n2、修复若干bug" cancelButtonTitle:@"取消" otherButtonTitles:@[@"前往更新"] handler:^(UIAlertController *alertController, UIAlertAction *action, NSInteger index) {
         switch (index) {
             case 0:
             {
@@ -25,14 +26,16 @@ UIAlertControllerCustom
             default:
                 break;
         }
-    }];`
+    }];
+```
 
 
 
 
 ![image](./source/action.png)
 
-`   [self showActionViewWithTitle:@"选择" message:nil cancelButtonTitle:@"取消" otherButtonTitles:@[@"拍照", @"从相册获取"] handler:^(UIAlertController *alertController, UIAlertAction *action, NSInteger index) {
+``` 
+    [self showActionViewWithTitle:@"选择" message:nil cancelButtonTitle:@"取消" otherButtonTitles:@[@"拍照", @"从相册获取"] handler:^(UIAlertController *alertController, UIAlertAction *action, NSInteger index) {
         switch (index) {
             case 0:
             {
@@ -52,6 +55,7 @@ UIAlertControllerCustom
             default:
                 break;
         }
-    }];`
+    }];
+```
 
 
