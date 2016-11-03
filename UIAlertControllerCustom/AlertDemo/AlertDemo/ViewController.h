@@ -10,7 +10,6 @@
 
 @interface ViewController : UIViewController
 
-- (void)testotherButtonTitles:(nullable NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION NS_EXTENSION_UNAVAILABLE_IOS("Use UIAlertController instead.");
 
 @end
 
