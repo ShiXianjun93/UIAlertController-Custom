@@ -1,14 +1,14 @@
 //
-//  UIAlertControllerCustom.m
-//  ESuperVisionProject
+//  UIAlertController+Custom.m
+//  AlertDemo
 //
-//  Created by 石显军 on 2016/10/20.
-//  Copyright © 2016年 dhyt. All rights reserved.
+//  Created by 石显军 on 2016/11/7.
+//  Copyright © 2016年 石显军. All rights reserved.
 //
 
-#import "UIAlertControllerCustom.h"
+#import "UIAlertController+Custom.h"
 
-@implementation UIAlertControllerCustom
+@implementation UIAlertController (Custom)
 
 /**
  * 显示 提示信息
@@ -66,7 +66,7 @@
  */
 + (void)showAlertViewWithController:(UIViewController *)controller title:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelTitle otherButtonTitles:(NSArray<NSString *> *)arrTitles handler:(void (^)(UIAlertController *alertController, UIAlertAction *action, NSInteger index))handler
 {
-    [UIAlertControllerCustom showPromptViewWithController:controller preferredStyle:UIAlertControllerStyleAlert title:title message:message cancelButtonTitle:cancelTitle otherButtonTitles:arrTitles handler:handler];
+    [UIAlertController showPromptViewWithController:controller preferredStyle:UIAlertControllerStyleAlert title:title message:message cancelButtonTitle:cancelTitle otherButtonTitles:arrTitles handler:handler];
 }
 
 /**
@@ -84,7 +84,7 @@
  */
 + (void)showActionViewWithController:(UIViewController *)controller title:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelTitle otherButtonTitles:(NSArray<NSString *> *)arrTitles handler:(void (^)(UIAlertController *alertController, UIAlertAction *action, NSInteger index))handler
 {
-    [UIAlertControllerCustom showPromptViewWithController:controller preferredStyle:UIAlertControllerStyleActionSheet title:title message:message cancelButtonTitle:cancelTitle otherButtonTitles:arrTitles handler:handler];
+    [UIAlertController showPromptViewWithController:controller preferredStyle:UIAlertControllerStyleActionSheet title:title message:message cancelButtonTitle:cancelTitle otherButtonTitles:arrTitles handler:handler];
 }
 
 @end

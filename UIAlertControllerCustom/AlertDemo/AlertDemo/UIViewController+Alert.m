@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+Alert.h"
-#import "UIAlertControllerCustom.h"
+#import "UIAlertController+Custom.h"
 
 @implementation UIViewController (Alert)
 
@@ -25,7 +25,7 @@
  */
 - (void)showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelTitle otherButtonTitles:(NSArray<NSString *> *)arrTitles handler:(void (^)(UIAlertController *alertController, UIAlertAction *action, NSInteger index))handler
 {
-    [UIAlertControllerCustom showAlertViewWithController:self title:title message:message cancelButtonTitle:cancelTitle otherButtonTitles:arrTitles handler:handler];
+    [UIAlertController showAlertViewWithController:self title:title message:message cancelButtonTitle:cancelTitle otherButtonTitles:arrTitles handler:handler];
 }
 
 
@@ -43,7 +43,7 @@
  */
 - (void)showActionViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelTitle otherButtonTitles:(NSArray<NSString *> *)arrTitles handler:(void (^)(UIAlertController *alertController, UIAlertAction *action, NSInteger index))handler
 {
-    [UIAlertControllerCustom showActionViewWithController:self title:title message:message cancelButtonTitle:cancelTitle otherButtonTitles:arrTitles handler:handler];
+    [UIAlertController showActionViewWithController:self title:title message:message cancelButtonTitle:cancelTitle otherButtonTitles:arrTitles handler:handler];
 }
 
 @end

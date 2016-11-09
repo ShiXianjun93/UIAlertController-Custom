@@ -1,14 +1,14 @@
 //
-//  UIAlertControllerCustom.h
-//  ESuperVisionProject
+//  UIAlertController+Custom.h
+//  AlertDemo
 //
-//  Created by 石显军 on 2016/10/20.
-//  Copyright © 2016年 dhyt. All rights reserved.
+//  Created by 石显军 on 2016/11/7.
+//  Copyright © 2016年 石显军. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIAlertControllerCustom : NSObject
+@interface UIAlertController (Custom)
 
 /**
  * 显示 提示信息
@@ -56,5 +56,6 @@
  * @blockParam index                回调 点击按钮排序 0为取消按钮 大于0s时 返回根据arrTitles下标+1
  */
 + (void)showActionViewWithController:(UIViewController *)controller title:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelTitle otherButtonTitles:(NSArray<NSString *> *)arrTitles handler:(void (^)(UIAlertController *alertController, UIAlertAction *action, NSInteger index))handler;
+
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "UIAlertControllerCustom.h"
 #import "UIViewController+Alert.h"
 
 @interface ViewController ()
