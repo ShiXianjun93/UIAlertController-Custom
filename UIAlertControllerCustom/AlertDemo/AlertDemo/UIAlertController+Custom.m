@@ -49,9 +49,13 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         
         if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad && preferredStyle == UIAlertControllerStyleActionSheet){
-            alertController.popoverPresentationController.sourceView = controller.view;
-            alertController.popoverPresentationController.sourceRect = controller.view.bounds;
+            if (alertController.popoverPresentationController){
+                alertController.popoverPresentationController.sourceView = controller.view;
+                alertController.popoverPresentationController.sourceRect = CGRectMake(controller.view.frame.size.width/2.f, controller.view.frame.size.height + 20, 1, 1);
+                alertController.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+            }
         }
+        
         [controller presentViewController:alertController animated:YES completion:nil];
     });
 }
@@ -91,5 +95,56 @@
 {
     [UIAlertController showPromptViewWithController:controller preferredStyle:UIAlertControllerStyleActionSheet title:title message:message cancelButtonTitle:cancelTitle otherButtonTitles:arrTitles handler:handler];
 }
+
+/**
+ * 用于 iPad 显示 Action 提示信息
+ *
+ * @param controller        显示的controller
+ * @param popoverSourceView 点击的视图
+ * @param title             标题
+ * @param message           信息
+ * @param cancelTitle       取消按钮标题
+ * @param arrTitles         其他按钮标题 数组 NSString 格式
+ * @param handler           点击回调
+ * @param alertController   回调 UIAlertController
+ * @param action            回调 UIAlertAction
+ * @param index             回调 点击按钮排序 0为取消按钮 大于0s时 返回根据arrTitles下标+1
+ */
++ (void)showiPadActionViewWithController:(UIViewController *)controller
+                       popoverSourceView:(UIView *)popoverSourceView
+                                   title:(NSString *)title
+                                 message:(NSString *)message
+                       cancelButtonTitle:(NSString *)cancelTitle
+                       otherButtonTitles:(NSArray<NSString *> *)arrTitles
+                                 handler:(void (^)(UIAlertController *alertController, UIAlertAction *action, NSInteger index))handler
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
+    if (cancelTitle) {
+        [alertController addAction:[UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            if (handler) {
+                handler(alertController, action, 0);
+            }
+        }]];
+    }
+    if (arrTitles){
+        
+        for (NSInteger i = 0; i < arrTitles.count; i++) {
+            NSString *title = arrTitles[i];
+            [alertController addAction:[UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                if (handler) {
+                    handler(alertController, action, i + 1);
+                }
+            }]];
+        }
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        alertController.popoverPresentationController.sourceView = popoverSourceView;
+        alertController.popoverPresentationController.sourceRect = popoverSourceView.bounds;
+        alertController.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+        [controller presentViewController:alertController animated:YES completion:nil];
+    });
+}
+
 
 @end
