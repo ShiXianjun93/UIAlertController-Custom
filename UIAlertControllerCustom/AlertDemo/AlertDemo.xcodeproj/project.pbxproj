@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		676AB9AF1E49A1EB00DD7D3C /* UIAlertController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 676AB9AE1E49A1EB00DD7D3C /* UIAlertController+Custom.m */; };
 		679D37BF1DC57240002EF8F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 679D37BE1DC57240002EF8F3 /* main.m */; };
 		679D37C21DC57240002EF8F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 679D37C11DC57240002EF8F3 /* AppDelegate.m */; };
 		679D37C51DC57240002EF8F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 679D37C41DC57240002EF8F3 /* ViewController.m */; };
@@ -14,10 +15,11 @@
 		679D37CA1DC57240002EF8F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679D37C91DC57240002EF8F3 /* Assets.xcassets */; };
 		679D37CD1DC57240002EF8F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679D37CB1DC57240002EF8F3 /* LaunchScreen.storyboard */; };
 		679D37DC1DC57600002EF8F3 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 679D37DB1DC57600002EF8F3 /* UIViewController+Alert.m */; };
-		67B08E331DD0585F00FE765A /* UIAlertController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B08E321DD0585F00FE765A /* UIAlertController+Custom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		676AB9AD1E49A1EB00DD7D3C /* UIAlertController+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Custom.h"; sourceTree = "<group>"; };
+		676AB9AE1E49A1EB00DD7D3C /* UIAlertController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Custom.m"; sourceTree = "<group>"; };
 		679D37BA1DC57240002EF8F3 /* AlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		679D37BE1DC57240002EF8F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		679D37C01DC57240002EF8F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,8 +32,6 @@
 		679D37CE1DC57240002EF8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		679D37DA1DC57600002EF8F3 /* UIViewController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
 		679D37DB1DC57600002EF8F3 /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
-		67B08E311DD0585F00FE765A /* UIAlertController+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Custom.h"; sourceTree = "<group>"; };
-		67B08E321DD0585F00FE765A /* UIAlertController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Custom.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +70,8 @@
 				679D37C41DC57240002EF8F3 /* ViewController.m */,
 				679D37DA1DC57600002EF8F3 /* UIViewController+Alert.h */,
 				679D37DB1DC57600002EF8F3 /* UIViewController+Alert.m */,
-				67B08E311DD0585F00FE765A /* UIAlertController+Custom.h */,
-				67B08E321DD0585F00FE765A /* UIAlertController+Custom.m */,
+				676AB9AD1E49A1EB00DD7D3C /* UIAlertController+Custom.h */,
+				676AB9AE1E49A1EB00DD7D3C /* UIAlertController+Custom.m */,
 				679D37C61DC57240002EF8F3 /* Main.storyboard */,
 				679D37C91DC57240002EF8F3 /* Assets.xcassets */,
 				679D37CB1DC57240002EF8F3 /* LaunchScreen.storyboard */,
@@ -162,9 +162,9 @@
 			files = (
 				679D37C51DC57240002EF8F3 /* ViewController.m in Sources */,
 				679D37C21DC57240002EF8F3 /* AppDelegate.m in Sources */,
-				67B08E331DD0585F00FE765A /* UIAlertController+Custom.m in Sources */,
 				679D37DC1DC57600002EF8F3 /* UIViewController+Alert.m in Sources */,
 				679D37BF1DC57240002EF8F3 /* main.m in Sources */,
+				676AB9AF1E49A1EB00DD7D3C /* UIAlertController+Custom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

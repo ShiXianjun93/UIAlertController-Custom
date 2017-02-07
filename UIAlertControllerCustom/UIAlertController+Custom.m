@@ -47,6 +47,11 @@
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad && preferredStyle == UIAlertControllerStyleActionSheet){
+            alertController.popoverPresentationController.sourceView = controller.view;
+            alertController.popoverPresentationController.sourceRect = controller.view.bounds;
+        }
         [controller presentViewController:alertController animated:YES completion:nil];
     });
 }
